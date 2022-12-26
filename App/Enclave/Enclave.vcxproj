@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{30ee47ad-6169-4db9-bac8-a00c13515f92}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <OEType>Enclave</OEType>
+    <OETADevKitPath>$OETADevKitPath$</OETADevKitPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>Open Enclave (v142)</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>Open Enclave (v142)</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(NoInherit);.\</IncludePath>
+    <LibraryPath>$(NoInherit)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Platform)\$(TargetName)\$(Configuration)\</IntDir>
+    <ExternalIncludePath>..\packages\open-enclave-cross.0.17.0\build\native\win\sgx\default\debug\include\</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(NoInherit);.\</IncludePath>
+    <LibraryPath>$(NoInherit)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Platform)\$(TargetName)\$(Configuration)\</IntDir>
+    <ExternalIncludePath>..\packages\open-enclave-cross.0.17.0\build\native\win\sgx\default\release\include\</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Label="OpenEnclave" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClangAdditionalOptions> -DSEAL_USE_INTRIN=OFF -DSEAL_USE_EXPLICIT_BZERO=OFF -DSEAL_USE_MSGSL=OFF -DSEAL_USE_ZLIB=OFF -DSEAL_USE_ZSTD=OFF -DSEAL_USE_CXX17=OFF</ClangAdditionalOptions>
+  </PropertyGroup>
+  <PropertyGroup Label="OpenEnclave" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClangAdditionalOptions> -DSEAL_USE_INTRIN=OFF -DSEAL_USE_EXPLICIT_BZERO=OFF -DSEAL_USE_MSGSL=OFF -DSEAL_USE_ZLIB=OFF -DSEAL_USE_ZSTD=OFF -DSEAL_USE_CXX17=OFF</ClangAdditionalOptions>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <ShowProgress>LinkVerboseLib</ShowProgress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Enclave_ecalls.cpp" />
+    <ClCompile Include="Enclave_t.c" />
+    <ClCompile Include="polytools\poly_arith.cpp" />
+    <ClCompile Include="seal_sgx\batchencoder.cpp" />
+    <ClCompile Include="seal_sgx\ciphertext.cpp" />
+    <ClCompile Include="seal_sgx\ckks.cpp" />
+    <ClCompile Include="seal_sgx\context.cpp" />
+    <ClCompile Include="seal_sgx\decryptor.cpp" />
+    <ClCompile Include="seal_sgx\encryptionparams.cpp" />
+    <ClCompile Include="seal_sgx\encryptor.cpp" />
+    <ClCompile Include="seal_sgx\evaluator.cpp" />
+    <ClCompile Include="seal_sgx\keygenerator.cpp" />
+    <ClCompile Include="seal_sgx\kswitchkeys.cpp" />
+    <ClCompile Include="seal_sgx\memorymanager.cpp" />
+    <ClCompile Include="seal_sgx\modulus.cpp" />
+    <ClCompile Include="seal_sgx\plaintext.cpp" />
+    <ClCompile Include="seal_sgx\randomgen.cpp" />
+    <ClCompile Include="seal_sgx\serialization.cpp" />
+    <ClCompile Include="seal_sgx\util\blake2b.c" />
+    <ClCompile Include="seal_sgx\util\blake2xb.c" />
+    <ClCompile Include="seal_sgx\util\clipnormal.cpp" />
+    <ClCompile Include="seal_sgx\util\common.cpp" />
+    <ClCompile Include="seal_sgx\util\croots.cpp" />
+    <ClCompile Include="seal_sgx\util\fips202.c" />
+    <ClCompile Include="seal_sgx\util\galois.cpp" />
+    <ClCompile Include="seal_sgx\util\globals.cpp" />
+    <ClCompile Include="seal_sgx\util\hash.cpp" />
+    <ClCompile Include="seal_sgx\util\iterator.cpp" />
+    <ClCompile Include="seal_sgx\util\mempool.cpp" />
+    <ClCompile Include="seal_sgx\util\ntt.cpp" />
+    <ClCompile Include="seal_sgx\util\numth.cpp" />
+    <ClCompile Include="seal_sgx\util\polyarithsmallmod.cpp" />
+    <ClCompile Include="seal_sgx\util\rlwe.cpp" />
+    <ClCompile Include="seal_sgx\util\rns.cpp" />
+    <ClCompile Include="seal_sgx\util\scalingvariant.cpp" />
+    <ClCompile Include="seal_sgx\util\streambuf.cpp" />
+    <ClCompile Include="seal_sgx\util\uintarith.cpp" />
+    <ClCompile Include="seal_sgx\util\uintarithmod.cpp" />
+    <ClCompile Include="seal_sgx\util\uintarithsmallmod.cpp" />
+    <ClCompile Include="seal_sgx\util\uintcore.cpp" />
+    <ClCompile Include="seal_sgx\util\ztools.cpp" />
+    <ClCompile Include="seal_sgx\valcheck.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enclave_args.h" />
+    <ClInclude Include="Enclave_t.h" />
+    <ClInclude Include="polytools\poly_arith.h" />
+    <ClInclude Include="seal_sgx\batchencoder.h" />
+    <ClInclude Include="seal_sgx\ciphertext.h" />
+    <ClInclude Include="seal_sgx\ckks.h" />
+    <ClInclude Include="seal_sgx\context.h" />
+    <ClInclude Include="seal_sgx\decryptor.h" />
+    <ClInclude Include="seal_sgx\dynarray.h" />
+    <ClInclude Include="seal_sgx\encryptionparams.h" />
+    <ClInclude Include="seal_sgx\encryptor.h" />
+    <ClInclude Include="seal_sgx\evaluator.h" />
+    <ClInclude Include="seal_sgx\galoiskeys.h" />
+    <ClInclude Include="seal_sgx\keygenerator.h" />
+    <ClInclude Include="seal_sgx\kswitchkeys.h" />
+    <ClInclude Include="seal_sgx\memorymanager.h" />
+    <ClInclude Include="seal_sgx\modulus.h" />
+    <ClInclude Include="seal_sgx\plaintext.h" />
+    <ClInclude Include="seal_sgx\publickey.h" />
+    <ClInclude Include="seal_sgx\randomgen.h" />
+    <ClInclude Include="seal_sgx\randomtostd.h" />
+    <ClInclude Include="seal_sgx\relinkeys.h" />
+    <ClInclude Include="seal_sgx\seal.h" />
+    <ClInclude Include="seal_sgx\secretkey.h" />
+    <ClInclude Include="seal_sgx\serializable.h" />
+    <ClInclude Include="seal_sgx\serialization.h" />
+    <ClInclude Include="seal_sgx\util\blake2-impl.h" />
+    <ClInclude Include="seal_sgx\util\blake2.h" />
+    <ClInclude Include="seal_sgx\util\clang.h" />
+    <ClInclude Include="seal_sgx\util\clipnormal.h" />
+    <ClInclude Include="seal_sgx\util\common.h" />
+    <ClInclude Include="seal_sgx\util\config.h" />
+    <ClInclude Include="seal_sgx\util\croots.h" />
+    <ClInclude Include="seal_sgx\util\defines.h" />
+    <ClInclude Include="seal_sgx\util\dwthandler.h" />
+    <ClInclude Include="seal_sgx\util\fips202.h" />
+    <ClInclude Include="seal_sgx\util\galois.h" />
+    <ClInclude Include="seal_sgx\util\gcc.h" />
+    <ClInclude Include="seal_sgx\util\globals.h" />
+    <ClInclude Include="seal_sgx\util\hash.h" />
+    <ClInclude Include="seal_sgx\util\hestdparms.h" />
+    <ClInclude Include="seal_sgx\util\iterator.h" />
+    <ClInclude Include="seal_sgx\util\locks.h" />
+    <ClInclude Include="seal_sgx\util\mempool.h" />
+    <ClInclude Include="seal_sgx\util\msvc.h" />
+    <ClInclude Include="seal_sgx\util\ntt.h" />
+    <ClInclude Include="seal_sgx\util\numth.h" />
+    <ClInclude Include="seal_sgx\util\pointer.h" />
+    <ClInclude Include="seal_sgx\util\polyarithsmallmod.h" />
+    <ClInclude Include="seal_sgx\util\polycore.h" />
+    <ClInclude Include="seal_sgx\util\rlwe.h" />
+    <ClInclude Include="seal_sgx\util\rns.h" />
+    <ClInclude Include="seal_sgx\util\scalingvariant.h" />
+    <ClInclude Include="seal_sgx\util\streambuf.h" />
+    <ClInclude Include="seal_sgx\util\uintarith.h" />
+    <ClInclude Include="seal_sgx\util\uintarithmod.h" />
+    <ClInclude Include="seal_sgx\util\uintarithsmallmod.h" />
+    <ClInclude Include="seal_sgx\util\uintcore.h" />
+    <ClInclude Include="seal_sgx\util\ztools.h" />
+    <ClInclude Include="seal_sgx\valcheck.h" />
+    <ClInclude Include="seal_sgx\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EdlItem Include="Enclave.edl">
+    </EdlItem>
+    <None Include="Enclave_private.pem" />
+    <None Include="optee/uuids.reg" />
+    <None Include="packages.config" />
+    <None Include="seal\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="seal\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="seal\util\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="seal\util\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Enclave.Debug.conf" />
+    <None Include="Enclave.Release.conf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\open-enclave-cross.0.17.0\build\native\open-enclave-cross.targets" Condition="Exists('..\packages\open-enclave-cross.0.17.0\build\native\open-enclave-cross.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\open-enclave-cross.0.17.0\build\native\open-enclave-cross.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\open-enclave-cross.0.17.0\build\native\open-enclave-cross.targets'))" />
+  </Target>
+</Project>

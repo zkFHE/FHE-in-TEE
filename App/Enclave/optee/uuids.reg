@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\OpteeTree\Parameters\SecureServices]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\OpteeTree\Parameters\SecureServices\{30ee47ad-6169-4db9-bac8-a00c13515f92}]
+

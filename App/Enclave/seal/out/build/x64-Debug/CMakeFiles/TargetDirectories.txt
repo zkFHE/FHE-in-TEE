@@ -1,0 +1,10 @@
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/CMakeFiles/install/local.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/CMakeFiles/install.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/CMakeFiles/list_install_components.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/util/CMakeFiles/install/local.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/util/CMakeFiles/install.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/util/CMakeFiles/edit_cache.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/util/CMakeFiles/rebuild_cache.dir
+C:/Users/Christian/source/repos/App/Enclave/seal/out/build/x64-Debug/util/CMakeFiles/list_install_components.dir

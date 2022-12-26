@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{d6bcc5f3-1d8c-4075-a6d6-4eb70719ec47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{83b531df-6cdf-437c-9097-60c4d7a5753d}</UniqueIdentifier>
+      <Extensions>cpp;c;edl;def;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{b3972ae7-4530-4053-95bf-8613b2cee28b}</UniqueIdentifier>
+      <Extensions>h;hpp;</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{568e4245-8d0c-41f9-b1d2-32951c9a1a96}</UniqueIdentifier>
+      <Extensions>rc;xml;pem;</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enclave_args.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enclave_t.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\blake2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\blake2-impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\clang.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\clipnormal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\croots.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\dwthandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\fips202.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\galois.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\gcc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\hestdparms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\locks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\mempool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\msvc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\ntt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\numth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\pointer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\polyarithsmallmod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\polycore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\rlwe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\rns.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\scalingvariant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\streambuf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\uintarith.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\uintarithmod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\uintarithsmallmod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\uintcore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\util\ztools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\batchencoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\ciphertext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\ckks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\decryptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\dynarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\encryptionparams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\encryptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\evaluator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\galoiskeys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\keygenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\kswitchkeys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\memorymanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\modulus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\plaintext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\publickey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\randomgen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\randomtostd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\relinkeys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\seal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\secretkey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\serializable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\serialization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\valcheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seal_sgx\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="polytools\poly_arith.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Enclave_private.pem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="packages.config" />
+    <None Include="seal\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="seal\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="seal\util\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="seal\util\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="optee/uuids.reg">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Enclave.Debug.conf">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Enclave.Release.conf">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EdlItem Include="Enclave.edl">
+      <Filter>Source Files</Filter>
+    </EdlItem>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Enclave_ecalls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Enclave_t.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\blake2b.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\blake2xb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\clipnormal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\croots.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\fips202.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\galois.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\globals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\hash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\iterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\mempool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\ntt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\numth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\polyarithsmallmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\rlwe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\rns.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\scalingvariant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\streambuf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\uintarith.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\uintarithmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\uintarithsmallmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\uintcore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\util\ztools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\batchencoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\ciphertext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\ckks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\context.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\decryptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\encryptionparams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\encryptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\keygenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\kswitchkeys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\memorymanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\modulus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\plaintext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\randomgen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\serialization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seal_sgx\valcheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polytools\poly_arith.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

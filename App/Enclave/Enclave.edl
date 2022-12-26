@@ -1,0 +1,28 @@
+enclave {
+    from "openenclave/edl/syscall.edl" import *;
+    from "platform.edl" import *;
+
+    // TODO: make ecalls/ocalls switchless when possible
+    trusted {
+        public void ecall_InitEnclave();
+        public void ecall_SendInputs();
+        public void ecall_StoreInput(int index, [in, out, count=len] unsigned char* buffer, size_t len); // TODO: receive inputs from client instead of host
+        public void ecall_MultiplyOutsource(int input1, int input2, int output) transition_using_threads;
+        public void ecall_MultiplyOutsource_BenchHost(int input1, int input2, int output) transition_using_threads;
+        public void ecall_Multiply(int input1, int input2, int output) transition_using_threads;
+        public void ecall_VerifyMult(int input1, int input2, int output); // TODO: make private (switch from OE to SGX if necessary), or ensure by some other way that host cannot call this
+        public void ecall_VerifyMultBatch_1();
+        public void ecall_VerifyMultBatch(int NUM_CTXTS);
+
+        // FHE-integrity evaluate
+        public void ecall_Tiny();
+        public void ecall_Small();
+        public void ecall_Medium();
+    };
+
+    untrusted {
+        void ocall_StoreInput(int index, [in, out, count=len] unsigned char* buffer, size_t len) transition_using_threads;
+        void* ocall_Multiply(int input_1, int input_2) transition_using_threads;
+        void* ocall_Multiply_BenchHost(int input_1, int input_2) transition_using_threads;
+    };
+};
